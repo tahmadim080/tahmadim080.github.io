@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Tanvir Rahman Fahim — CSE Student, AI & Linux Enthusiast | Bangladesh</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Portfolio of Md. Tanvir Rahman Fahim — BSc CSE student at Daffodil International University, Bangladesh. AI master, Linux power user, open source lover, competitive programmer.">
+<meta name="keywords" content="Md. Tanvir Rahman Fahim, Tanvir Rahman Fahim, tahmadim080, Fahim DIU, CSE student Bangladesh, Daffodil International University, Linux developer, AI enthusiast, open source, portfolio, competitive programming">
+<meta name="author" content="Md. Tanvir Rahman Fahim">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tahmadim080.github.io"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tahmadim080.github.io">
+<meta property="og:title" content="Md. Tanvir Rahman Fahim — Portfolio">
+<meta property="og:description" content="CSE student at Daffodil International University, Bangladesh. AI master, Linux nerd, open source lover.">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tahmadim003">
+<meta name="twitter:title" content="Md. Tanvir Rahman Fahim — Portfolio">
+<meta name="twitter:description" content="CSE student at DIU Bangladesh. AI, Linux, open source.">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Md. Tanvir Rahman Fahim",
+  "alternateName": ["Tanvir Rahman Fahim", "Fahim", "tahmadim080"],
+  "url": "https://tahmadim080.github.io",
+  "email": "tahmadim001@gmail.com",
+  "jobTitle": "CSE Student",
+  "affiliation": {
+    "@type": "EducationalOrganization",
+    "name": "Daffodil International University"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BD"
+  },
+  "sameAs": [
+    "https://github.com/tahmadim080",
+    "https://www.linkedin.com/in/tahmadim078/",
+    "https://x.com/tahmadim003",
+    "https://www.facebook.com/tahmadim064/",
+    "https://codeforces.com/profile/tahmadim8703"
+  ],
+  "knowsAbout": ["Artificial Intelligence", "Linux", "Python", "C Programming", "HTML", "CSS", "Open Source Software", "Competitive Programming"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style id="theme-defaults">:root{--bg:#282a36;--bg2:#1e2029;--bg3:#343746;--surface:#44475a;--border:#6272a4;--text:#f8f8f2;--muted:#6272a4;--accent:#bd93f9;--accent2:#ff79c6;--green:#50fa7b;--yellow:#f1fa8c;--cyan:#8be9fd;--orange:#ffb86c;--red:#ff5555;--grad:linear-gradient(135deg,#bd93f9 0%,#ff79c6 50%,#8be9fd 100%)}</style>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .35s,color .35s}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;background:var(--bg2);border-bottom:1px solid var(--border);transition:background .35s,border-color .35s}
+.nav-logo{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;color:var(--accent);letter-spacing:-0.5px}
+.nav-logo em{color:var(--accent2);font-style:normal}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.72rem;text-decoration:none;color:var(--muted);transition:color .2s;letter-spacing:1px;text-transform:uppercase}
+.nav-links a:hover{color:var(--accent)}
+.nav-controls{display:flex;gap:.6rem;align-items:center}
+
+/* THEME BUTTONS */
+.theme-selector{display:flex;gap:4px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px}
+.tbtn{width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;border-radius:50%!important;cursor:pointer;transition:transform .2s,opacity .2s;flex-shrink:0;border:none!important;padding:0!important;margin:0!important;display:block!important;box-sizing:border-box!important}
+.tbtn:hover{transform:scale(1.2);opacity:.85}
+.tbtn.active{box-shadow:0 0 0 2px #fff,0 0 0 3px rgba(0,0,0,.3)}
+
+/* MODE TOGGLE */
+.mtoggle{width:52px;height:26px;background:var(--surface);border:1px solid var(--border);border-radius:13px;cursor:pointer;position:relative;transition:background .35s;display:flex;align-items:center;padding:3px;user-select:none}
+.mball{width:20px;height:20px;background:var(--accent);border-radius:50%;transition:transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.mball.right{transform:translateX(26px)}
+.mico{position:absolute;font-size:11px;pointer-events:none;line-height:1}
+.mico.moon{left:6px;top:50%;transform:translateY(-50%)}
+.mico.sun{right:6px;top:50%;transform:translateY(-50%)}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 2rem 4rem;position:relative;overflow:hidden}
+.orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.22;animation:orbf 9s ease-in-out infinite}
+.orb1{width:500px;height:500px;top:-120px;left:-120px;background:var(--accent);animation-delay:0s}
+.orb2{width:400px;height:400px;bottom:-80px;right:-100px;background:var(--accent2);animation-delay:-3.5s}
+.orb3{width:280px;height:280px;top:45%;left:45%;background:var(--cyan);animation-delay:-6s}
+@keyframes orbf{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.06)}}
+
+.hero-inner{position:relative;z-index:1;text-align:center;max-width:860px}
+.h-greet{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;opacity:0;animation:fup .6s .2s forwards}
+.h-name{font-size:clamp(2.2rem,6vw,4.8rem);font-weight:700;line-height:1.1;margin-bottom:.6rem;opacity:0;animation:fup .6s .4s forwards;color:var(--text)}
+.h-name{position:relative}
+.h-name .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:crt-flicker 6s infinite}
+/* scanline removed */
+/* red ghost */
+.h-name .gr::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-red 5s infinite}
+/* cyan ghost */
+.h-name .gr::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-cyan 5s infinite .07s}
+
+/* CRT flicker — subtle brightness pulse */
+@keyframes crt-flicker{
+  0%,100%{filter:brightness(1)}
+  92%{filter:brightness(1)}
+  92.5%{filter:brightness(1.4) contrast(1.2)}
+  93%{filter:brightness(0.7)}
+  93.5%{filter:brightness(1.3)}
+  94%{filter:brightness(1)}
+}
+
+
+
+/* red channel glitch */
+@keyframes glitch-red{
+  0%,79%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  80%{opacity:.9;transform:translate(-4px,0);clip-path:inset(10% 0 60% 0);filter:hue-rotate(120deg)}
+  81%{opacity:.7;transform:translate(4px,0);clip-path:inset(55% 0 15% 0)}
+  82%{opacity:.9;transform:translate(-2px,1px);clip-path:inset(30% 0 40% 0);filter:hue-rotate(-60deg)}
+  83%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  86%{opacity:.8;transform:translate(5px,-1px);clip-path:inset(5% 0 70% 0);filter:hue-rotate(180deg)}
+  87%{opacity:.6;transform:translate(-5px,1px);clip-path:inset(65% 0 5% 0)}
+  88%{opacity:.9;transform:translate(3px,0);clip-path:inset(40% 0 20% 0)}
+  89%{opacity:0;clip-path:inset(50% 0 50% 0)}
+}
+
+/* cyan channel glitch */
+@keyframes glitch-cyan{
+  0%,79%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  80%{opacity:.8;transform:translate(4px,0);clip-path:inset(60% 0 10% 0);filter:hue-rotate(-120deg)}
+  81%{opacity:.6;transform:translate(-4px,0);clip-path:inset(15% 0 55% 0)}
+  82%{opacity:.8;transform:translate(2px,-1px);clip-path:inset(40% 0 30% 0);filter:hue-rotate(60deg)}
+  83%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  86%{opacity:.7;transform:translate(-5px,1px);clip-path:inset(70% 0 5% 0);filter:hue-rotate(-180deg)}
+  87%{opacity:.5;transform:translate(5px,-1px);clip-path:inset(5% 0 65% 0)}
+  88%{opacity:.8;transform:translate(-3px,0);clip-path:inset(20% 0 45% 0)}
+  89%{opacity:0;clip-path:inset(50% 0 50% 0)}
+}
+.h-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(.85rem,2vw,1rem);color:var(--muted);margin-bottom:2.5rem;opacity:0;animation:fup .6s .6s forwards}
+.h-tag .a1{color:var(--accent)}
+.h-tag .a2{color:var(--accent2)}
+#tcursor::after{content:'|';animation:blink 1s infinite;color:var(--accent)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+.badges{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;margin-bottom:2.8rem;opacity:0;animation:fup .6s .8s forwards}
+.badge{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:.35rem .9rem;border-radius:20px;border:1px solid var(--border);background:var(--bg3);color:var(--text);transition:border-color .2s,transform .2s,box-shadow .2s;cursor:default}
+.badge:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle}
+
+.cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fup .6s 1s forwards}
+.btn{font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s;letter-spacing:.5px;cursor:pointer;border:none;display:inline-block}
+.btn-p{background:var(--grad);color:var(--bg);font-weight:700}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--accent) 40%,transparent)}
+.btn-o{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-o:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
+
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:fup 1s 1.5s forwards;cursor:pointer;z-index:2}
+.scroll-hint span{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:3px;text-transform:uppercase}
+.smouse{width:20px;height:32px;border:2px solid var(--muted);border-radius:10px;display:flex;align-items:flex-start;justify-content:center;padding-top:4px}
+.swheel{width:3px;height:6px;background:var(--accent);border-radius:2px;animation:sw 1.5s ease-in-out infinite}
+@keyframes sw{0%,100%{transform:translateY(0);opacity:1}75%{transform:translateY(10px);opacity:0}}
+@keyframes fup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+section{padding:5.5rem 2rem;position:relative;z-index:1}
+.container{max-width:1000px;margin:0 auto}
+.slabel{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:.4rem}
+.stitle{font-size:2.2rem;font-weight:700;margin-bottom:2.8rem;position:relative;display:inline-block;color:var(--text)}
+.stitle::after{content:'';position:absolute;bottom:-8px;left:0;width:50px;height:3px;background:var(--grad);border-radius:2px}
+
+/* ABOUT */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:stretch}
+.about-text p{color:var(--muted);margin-bottom:1.1rem;line-height:1.8;font-size:.97rem}
+.about-text strong{color:var(--text)}
+.hl{color:var(--accent);font-weight:600}
+.hl2{color:var(--accent2);font-weight:600}
+.stats{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.9rem;flex:1}
+.scard{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:1.4rem;text-align:center;transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.scard:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--accent) 20%,transparent)}
+.snum{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.slbl{font-size:.75rem;color:var(--muted);margin-top:.2rem;font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+.gcrd{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.6rem;display:flex;align-items:center;gap:1.2rem;margin-top:1.2rem;transition:border-color .2s}
+.gcrd:hover{border-color:var(--accent2)}
+.gcrd .ico{font-size:2.5rem}
+.gcrd .ti{font-size:.95rem;font-weight:600;color:var(--text)}
+.gcrd .su{font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:3px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.4rem}
+.skcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.6rem;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.skcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.skcard:hover::before{transform:scaleX(1)}
+.skcard:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 35px color-mix(in srgb,var(--accent) 20%,transparent)}
+.skicon{font-size:1.9rem;margin-bottom:.7rem}
+.skname{font-size:1.05rem;font-weight:600;margin-bottom:.4rem;color:var(--text)}
+.skdesc{font-size:.82rem;color:var(--muted);margin-bottom:.9rem;line-height:1.6}
+.skbar{height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.skfill{height:100%;background:var(--grad);border-radius:2px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
+.sklvl{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);text-align:right;margin-top:.3rem}
+
+/* LINUX */
+#linux{background:var(--bg2)}
+.terminal{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'JetBrains Mono',monospace;max-width:680px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.t-hdr{background:var(--bg3);padding:.7rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border)}
+.dc{width:12px;height:12px;border-radius:50%}
+.t-title{font-size:.72rem;color:var(--muted);margin:0 auto;letter-spacing:1px}
+.t-body{padding:1.3rem;font-size:.82rem;line-height:2.1}
+.tp{color:var(--accent)}.tpa{color:var(--cyan)}.tc{color:var(--text)}.to{color:var(--muted);padding-left:1rem}.tg{color:var(--green)}.ty{color:var(--yellow)}.tor{color:var(--orange)}.ta{color:var(--accent)}
+.distros{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-top:2rem}
+.dtag{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.28rem .75rem;border-radius:4px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);transition:all .2s;cursor:default}
+.dtag:hover{color:var(--accent);border-color:var(--accent);transform:scale(1.05)}
+
+/* CP */
+.cpcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;transition:border-color .2s,box-shadow .2s}
+.cpcard:hover{border-color:var(--accent);box-shadow:0 12px 40px color-mix(in srgb,var(--accent) 20%,transparent)}
+.cphandle{font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--accent);margin-bottom:.5rem}
+.cpinfo{font-size:.83rem;color:var(--muted);line-height:2}
+.cpinfo span{color:var(--text);font-weight:500}
+.lbars{display:flex;flex-direction:column;gap:.7rem}
+.lrow{display:grid;grid-template-columns:72px 1fr 44px;align-items:center;gap:.6rem}
+.lname{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted)}
+.lbar{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.lfill{height:100%;background:var(--grad);border-radius:3px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
+.lpct{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);text-align:right}
+
+/* CONNECT */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.soc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.9rem;transition:border-color .2s,transform .2s,box-shadow .2s;min-height:80px}
+.soc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--accent) 20%,transparent)}
+.soci{width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:var(--bg3);border:1px solid var(--border);flex-shrink:0;transition:background .2s}
+.soc:hover .soci{background:var(--surface);border-color:var(--accent)}
+.socn{font-weight:600;font-size:.88rem;color:var(--text)}
+.soch{font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px;word-break:break-all;line-height:1.4}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);letter-spacing:1px;transition:background .35s,border-color .35s}
+footer em{color:var(--accent);font-style:normal}
+
+/* PARTICLES */
+#ptcl{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ptc{position:absolute;border-radius:50%;background:var(--accent);opacity:0;animation:pf linear infinite}
+@keyframes pf{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:.5}90%{opacity:.2}100%{transform:translateY(-5vh) translateX(var(--dx));opacity:0}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* CURSOR GLOW */
+#cglow{position:fixed;width:280px;height:280px;pointer-events:none;z-index:0;border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);opacity:.07;transform:translate(-50%,-50%);transition:left .12s,top .12s}
+
+@media(max-width:768px){.nav-links{display:none}.about-grid{grid-template-columns:1fr}.cpcard{grid-template-columns:1fr}.social-grid{grid-template-columns:repeat(2,1fr)}nav{padding:0 1rem}section{padding:4rem 1rem}}
+@media(max-width:480px){.social-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="cglow"></div>
+<div id="ptcl"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">fahim<em>.</em>dev</div>
+  <div class="nav-links">
+    <a href="#about">about</a>
+    <a href="#skills">skills</a>
+    <a href="#linux">linux</a>
+    <a href="#cp">cp</a>
+    <a href="#connect">connect</a>
+  </div>
+  <div class="nav-controls">
+    <div class="theme-selector">
+      <div class="tbtn active" data-t="dracula" title="Dracula" style="background:linear-gradient(135deg,#bd93f9,#ff79c6)"></div>
+      <div class="tbtn" data-t="nord" title="Nord" style="background:linear-gradient(135deg,#88c0d0,#5e81ac)"></div>
+      <div class="tbtn" data-t="everforest" title="Everforest" style="background:linear-gradient(135deg,#a7c080,#7fbbb3)"></div>
+      <div class="tbtn" data-t="gruvbox" title="Gruvbox" style="background:linear-gradient(135deg,#d79921,#fe8019)"></div>
+    </div>
+    <div class="mtoggle" id="mtog" title="Toggle light/dark">
+      <span class="mico moon">🌙</span>
+      <span class="mico sun">☀️</span>
+      <div class="mball" id="mball"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <div class="hero-inner">
+    <p class="h-greet">// Hello, World! 👋</p>
+    <h1 class="h-name">
+      <span class="gr" data-text="Md. Tanvir Rahman">Md. Tanvir Rahman</span><br>
+      <span class="gr" data-text="Fahim">Fahim</span>
+    </h1>
+    <p class="h-tag">
+      <span class="a1">CSE Student</span> @ DIU &nbsp;·&nbsp;
+      <span class="a2">Linux Nerd</span> &nbsp;·&nbsp;
+      <span id="tcursor"></span>
+    </p>
+    <div class="badges">
+      <span class="badge"><span class="dot" style="background:#bd93f9"></span>Bangladesh 🇧🇩</span>
+      <span class="badge"><span class="dot" style="background:#50fa7b"></span>Tech Enthusiast</span>
+      <span class="badge"><span class="dot" style="background:#8be9fd"></span>AI Master</span>
+      <span class="badge"><span class="dot" style="background:#ffb86c"></span>Linux Since 2019</span>
+      <span class="badge"><span class="dot" style="background:#ff79c6"></span>80+ Distros</span>
+      <span class="badge"><span class="dot" style="background:#f1fa8c"></span>Genshin Player</span>
+      <span class="badge"><span class="dot" style="background:#ff5555"></span>CP Grinder</span>
+    </div>
+    <div class="cta">
+      <a href="#connect" class="btn btn-p">Get In Touch</a>
+      <a href="https://github.com/tahmadim080/" target="_blank" class="btn btn-o">View GitHub</a>
+    </div>
+  </div>
+  <div class="scroll-hint" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <div class="smouse"><div class="swheel"></div></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="slabel">01 // about_me</p>
+    <h2 class="stitle">Who Am I?</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="about-text">
+          <p>Hey! I'm <strong>Tanvir Rahman Fahim</strong>, a passionate <span class="hl">BSc CSE student</span> at <strong>Daffodil International University</strong>, Bangladesh. I love building things, breaking things, and figuring out how everything works under the hood.</p>
+          <p>My journey with <span class="hl2">Linux</span> started back in 2019 and it changed everything. Since then I've distro-hopped through <strong>80+ distributions</strong> — from Arch to Gentoo to NixOS — always chasing the perfect setup.</p>
+          <p>I'm deeply interested in <span class="hl">AI</span> and have built vast knowledge in it. Currently grinding <span class="hl2">C++ for competitive programming</span> while juggling university and late-night Genshin Impact sessions.</p>
+          <p>Based in <strong>🇧🇩 Bangladesh</strong>, dreaming globally, building daily.</p>
+        </div>
+        <div class="gcrd">
+          <div class="ico">⚔️</div>
+          <div>
+            <div class="ti">Genshin Impact Player</div>
+            <div class="su">Exploring Teyvat in free time 🌸</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.15s;display:flex;flex-direction:column">
+        <div class="stats">
+          <div class="scard"><div class="snum">80+</div><div class="slbl">Linux Distros</div></div>
+          <div class="scard"><div class="snum">5+</div><div class="slbl">Languages</div></div>
+          <div class="scard"><div class="snum">2019</div><div class="slbl">Linux Journey</div></div>
+          <div class="scard"><div class="snum">∞</div><div class="slbl">Curiosity</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="slabel">02 // skills</p>
+    <h2 class="stitle">Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skcard reveal" data-level="92">
+        <div class="skicon">🤖</div>
+        <div class="skname">Artificial Intelligence</div>
+        <div class="skdesc">Vast knowledge in AI concepts, ML fundamentals, and practical AI tooling.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Master</div>
+      </div>
+      <div class="skcard reveal" data-level="90" style="transition-delay:.05s">
+        <div class="skicon">🌐</div>
+        <div class="skname">HTML &amp; CSS</div>
+        <div class="skdesc">Crafting responsive, modern web interfaces with semantic HTML and expressive CSS.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Advanced</div>
+      </div>
+      <div class="skcard reveal" data-level="96" style="transition-delay:.1s">
+        <div class="skicon">🐧</div>
+        <div class="skname">Linux</div>
+        <div class="skdesc">Power user since 2019. 80+ distros, kernel config, shell scripting, sysadmin.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Expert</div>
+      </div>
+      <div class="skcard reveal" data-level="80" style="transition-delay:.15s">
+        <div class="skicon">⚙️</div>
+        <div class="skname">C Programming</div>
+        <div class="skdesc">Systems programming, memory management, pointers, low-level concepts.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Proficient</div>
+      </div>
+      <div class="skcard reveal" data-level="78" style="transition-delay:.2s">
+        <div class="skicon">🐍</div>
+        <div class="skname">Python</div>
+        <div class="skdesc">Scripting, automation, AI/ML experiments, data processing.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Proficient</div>
+      </div>
+      <div class="skcard reveal" data-level="42" style="transition-delay:.25s">
+        <div class="skicon">🏆</div>
+        <div class="skname">C++ (Learning)</div>
+        <div class="skdesc">Currently mastering C++ for competitive programming — STL, algorithms, DS.</div>
+        <div class="skbar"><div class="skfill"></div></div>
+        <div class="sklvl">Intermediate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINUX -->
+<section id="linux">
+  <div class="container">
+    <p class="slabel">03 // linux_journey</p>
+    <h2 class="stitle">Linux Nerd 🐧</h2>
+    <div class="terminal reveal">
+      <div class="t-hdr">
+        <div class="dc" style="background:#ff5f57"></div>
+        <div class="dc" style="background:#febc2e"></div>
+        <div class="dc" style="background:#28c840"></div>
+        <span class="t-title">fahim@pop-os ~ $</span>
+      </div>
+      <div class="t-body">
+        <div><span class="tp">fahim</span><span class="tpa">@pop-os</span><span class="tc"> ~ $ </span><span class="ty">fastfetch</span></div>
+        <div class="to"><span class="tg">OS:</span>       <span class="ta">Pop!_OS 24.04 LTS x86_64</span> (current)</div>
+        <div class="to"><span class="tg">DE:</span>       <span class="ta">COSMIC</span> <span class="tor"># new &amp; blazing fast 🚀</span></div>
+        <div class="to"><span class="tg">Journey:</span>  <span class="ta">2019 → present</span></div>
+        <div class="to"><span class="tg">Distros:</span>  <span class="tor">80+</span> explored &amp; configured</div>
+        <div class="to"><span class="tg">Shell:</span>    <span class="ta">fish</span> <span class="tor"># smart &amp; friendly 🐟</span></div>
+        <div class="to"><span class="tg">Editor:</span>   <span class="ta">nvim</span></div>
+        <div class="to"><span class="tg">Loves:</span>    <span class="ta">Open Source Software ❤️</span></div>
+        <br>
+        <div><span class="tp">fahim</span><span class="tpa">@pop-os</span><span class="tc"> ~ $ </span><span class="ty">cat /proc/passion</span></div>
+        <div class="to"><span class="tg">love_for_linux</span>=<span class="ta">true</span></div>
+        <div class="to"><span class="tg">distro_hopped</span>=<span class="tor">too_many_times</span></div>
+        <div class="to"><span class="tg">loves_oss</span>=<span class="ta">absolutely</span> <span class="tg"># Free as in freedom 🕊️</span></div>
+      </div>
+    </div>
+    <div class="distros reveal" style="transition-delay:.2s">
+      <span class="dtag">Arch</span><span class="dtag">Ubuntu</span><span class="dtag">Debian</span><span class="dtag">Fedora</span><span class="dtag">NixOS</span><span class="dtag">Gentoo</span><span class="dtag">Void Linux</span><span class="dtag">OpenSUSE</span><span class="dtag">Alpine</span><span class="dtag">Manjaro</span><span class="dtag">EndeavourOS</span><span class="dtag">Pop!_OS</span><span class="dtag">Kali</span><span class="dtag">Parrot</span><span class="dtag">Tails</span><span class="dtag">Artix</span><span class="dtag">Slackware</span><span class="dtag">LFS</span><span class="dtag">MX Linux</span><span class="dtag">Linux Mint</span><span class="dtag">Zorin</span><span class="dtag">Elementary</span><span class="dtag">Deepin</span><span class="dtag">CachyOS</span><span class="dtag">Garuda</span><span class="dtag">Solus</span><span class="dtag">Devuan</span><span class="dtag">Chimera</span><span class="dtag">...&amp; 52+ more</span>
+    </div>
+  </div>
+</section>
+
+<!-- CP -->
+<section id="cp">
+  <div class="container">
+    <p class="slabel">04 // competitive_programming</p>
+    <h2 class="stitle">Competitive Programming</h2>
+    <div class="cpcard reveal">
+      <div>
+        <div class="cphandle">tahmadim8703</div>
+        <div class="cpinfo">
+          <div>Platform: <span>Codeforces</span></div>
+          <div>Language: <span>C++ (learning)</span></div>
+          <div>Status: <span>🚀 Grinding every day</span></div>
+          <div>Goal: <span>Specialist → Expert</span></div>
+        </div>
+        <a href="https://codeforces.com/profile/tahmadim8703" target="_blank" class="btn btn-o" style="margin-top:1rem;font-size:.75rem;padding:.5rem 1.2rem">View CF Profile →</a>
+      </div>
+      <div class="lbars">
+        <div class="lrow"><span class="lname">Arrays</span><div class="lbar"><div class="lfill" data-w="75"></div></div><span class="lpct">75%</span></div>
+        <div class="lrow"><span class="lname">Sorting</span><div class="lbar"><div class="lfill" data-w="70"></div></div><span class="lpct">70%</span></div>
+        <div class="lrow"><span class="lname">Greedy</span><div class="lbar"><div class="lfill" data-w="55"></div></div><span class="lpct">55%</span></div>
+        <div class="lrow"><span class="lname">Graphs</span><div class="lbar"><div class="lfill" data-w="35"></div></div><span class="lpct">35%</span></div>
+        <div class="lrow"><span class="lname">DP</span><div class="lbar"><div class="lfill" data-w="28"></div></div><span class="lpct">28%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect">
+  <div class="container">
+    <p class="slabel">05 // connect</p>
+    <h2 class="stitle">Let's Connect</h2>
+    <div class="social-grid">
+      <a href="https://github.com/tahmadim080/" target="_blank" class="soc reveal">
+        <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+        <div><div class="socn">GitHub</div><div class="soch">@tahmadim080</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/tahmadim078/" target="_blank" class="soc reveal" style="transition-delay:.05s">
+        <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+        <div><div class="socn">LinkedIn</div><div class="soch">@tahmadim078</div></div>
+      </a>
+      <a href="https://x.com/tahmadim003" target="_blank" class="soc reveal" style="transition-delay:.1s">
+        <div class="soci"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.733-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+        <div><div class="socn">X (Twitter)</div><div class="soch">@tahmadim003</div></div>
+      </a>
+      <a href="https://www.facebook.com/tahmadim064/" target="_blank" class="soc reveal" style="transition-delay:.15s">
+        <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+        <div><div class="socn">Facebook</div><div class="soch">@tahmadim064</div></div>
+      </a>
+      <a href="https://codeforces.com/profile/tahmadim8703" target="_blank" class="soc reveal" style="transition-delay:.2s">
+        <div class="soci" style="font-family:'JetBrains Mono';font-weight:700;font-size:1rem;color:var(--accent)">CF</div>
+        <div><div class="socn">Codeforces</div><div class="soch">@tahmadim8703</div></div>
+      </a>
+      <a href="mailto:tahmadim001@gmail.com" class="soc reveal" style="transition-delay:.25s">
+        <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
+        <div><div class="socn">Email</div><div class="soch">tahmadim001@gmail.com</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Built with <em>❤️</em> by <em>Md. Tanvir Rahman Fahim</em> · Daffodil International University · Bangladesh 🇧🇩</p>
+  <p style="margin-top:.4rem;font-size:.62rem;opacity:.6">Single-file portfolio · Host on GitHub Pages</p>
+</footer>
+
+<script>
+window.scrollTo(0,0);
+history.scrollRestoration='manual';
+
+const THEMES={dracula:{dark:{bg:'#282a36',bg2:'#1e2029',bg3:'#343746',surface:'#44475a',border:'#6272a4',text:'#f8f8f2',muted:'#6272a4',accent:'#bd93f9',accent2:'#ff79c6',green:'#50fa7b',yellow:'#f1fa8c',cyan:'#8be9fd',orange:'#ffb86c',red:'#ff5555',grad:'linear-gradient(135deg,#bd93f9 0%,#ff79c6 50%,#8be9fd 100%)'},light:{bg:'#f8f8f2',bg2:'#ebebeb',bg3:'#dddde8',surface:'#d0d0e0',border:'#b0b8d8',text:'#282a36',muted:'#5a6080',accent:'#7c4dcc',accent2:'#c93b8a',green:'#1fa34e',yellow:'#8a7700',cyan:'#007890',orange:'#c06000',red:'#cc2222',grad:'linear-gradient(135deg,#7c4dcc 0%,#c93b8a 50%,#007890 100%)'}},nord:{dark:{bg:'#2e3440',bg2:'#242830',bg3:'#3b4252',surface:'#434c5e',border:'#4c566a',text:'#eceff4',muted:'#7b88a1',accent:'#88c0d0',accent2:'#81a1c1',green:'#a3be8c',yellow:'#ebcb8b',cyan:'#8fbcbb',orange:'#d08770',red:'#bf616a',grad:'linear-gradient(135deg,#88c0d0 0%,#81a1c1 50%,#8fbcbb 100%)'},light:{bg:'#eceff4',bg2:'#e5e9f0',bg3:'#d8dee9',surface:'#cdd4e0',border:'#b0bac8',text:'#2e3440',muted:'#4c566a',accent:'#5e81ac',accent2:'#81a1c1',green:'#4c7a3e',yellow:'#9a7c2a',cyan:'#3d7a7c',orange:'#c05a30',red:'#7c3040',grad:'linear-gradient(135deg,#5e81ac 0%,#81a1c1 50%,#8fbcbb 100%)'}},everforest:{dark:{bg:'#2d353b',bg2:'#232a2e',bg3:'#343f44',surface:'#3d484d',border:'#475258',text:'#d3c6aa',muted:'#7a8478',accent:'#a7c080',accent2:'#83c092',green:'#a7c080',yellow:'#dbbc7f',cyan:'#7fbbb3',orange:'#e69875',red:'#e67e80',grad:'linear-gradient(135deg,#a7c080 0%,#7fbbb3 50%,#83c092 100%)'},light:{bg:'#fdf6e3',bg2:'#f4ede0',bg3:'#eae3d4',surface:'#ddd8c6',border:'#bfbcb0',text:'#5c6a72',muted:'#829181',accent:'#5c8542',accent2:'#3a9468',green:'#5c8542',yellow:'#9c7c2a',cyan:'#4a7c78',orange:'#b05a30',red:'#904040',grad:'linear-gradient(135deg,#5c8542 0%,#4a7c78 50%,#3a9468 100%)'}},gruvbox:{dark:{bg:'#282828',bg2:'#1d2021',bg3:'#3c3836',surface:'#504945',border:'#665c54',text:'#ebdbb2',muted:'#928374',accent:'#d79921',accent2:'#fe8019',green:'#b8bb26',yellow:'#fabd2f',cyan:'#8ec07c',orange:'#fe8019',red:'#fb4934',grad:'linear-gradient(135deg,#d79921 0%,#fe8019 50%,#b8bb26 100%)'},light:{bg:'#fbf1c7',bg2:'#f2e5bc',bg3:'#ebdbb2',surface:'#d5c4a1',border:'#bdae93',text:'#3c3836',muted:'#7c6f64',accent:'#b57614',accent2:'#af3a03',green:'#79740e',yellow:'#b57614',cyan:'#427b58',orange:'#af3a03',red:'#9d0006',grad:'linear-gradient(135deg,#b57614 0%,#af3a03 50%,#79740e 100%)'}}};
+
+let curTheme=localStorage.getItem('pf-theme')||'dracula';
+let curMode=localStorage.getItem('pf-mode')||'dark';
+
+function spawnParticles(){const c=document.getElementById('ptcl');c.innerHTML='';const n=window.innerWidth<600?12:25;for(let i=0;i<n;i++){const p=document.createElement('div');p.className='ptc';const size=Math.random()*2+1;p.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*10}s;--dx:${(Math.random()-.5)*180}px`;c.appendChild(p);}}
+
+function applyTheme(){const vars=THEMES[curTheme][curMode];const root=document.documentElement.style;Object.entries(vars).forEach(([k,v])=>root.setProperty('--'+k,v));const ball=document.getElementById('mball');ball.className='mball'+(curMode==='light'?' right':'');document.querySelectorAll('.tbtn').forEach(b=>b.classList.toggle('active',b.dataset.t===curTheme));spawnParticles();}
+
+function setTheme(t){curTheme=t;localStorage.setItem('pf-theme',t);applyTheme();}
+function toggleMode(){curMode=curMode==='dark'?'light':'dark';localStorage.setItem('pf-mode',curMode);applyTheme();}
+
+document.getElementById('mtog').addEventListener('click',toggleMode);
+document.querySelectorAll('.tbtn').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.t)));
+applyTheme();
+
+const phrases=['Tech Enthusiast','AI Master','Open Source Lover','Linux Power User','CP Grinder'];
+let pi=0,ci=0,del=false;
+const tel=document.getElementById('tcursor');
+function type(){const w=phrases[pi];if(!del){tel.textContent=w.slice(0,++ci);if(ci===w.length){del=true;setTimeout(type,1800);return}}else{tel.textContent=w.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length}}setTimeout(type,del?55:100);}
+type();
+
+document.addEventListener('mousemove',e=>{const g=document.getElementById('cglow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';});
+
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');const sf=e.target.querySelector('.skfill');if(sf)setTimeout(()=>sf.style.width=e.target.dataset.level+'%',100);e.target.querySelectorAll('.lfill').forEach(f=>setTimeout(()=>f.style.width=f.dataset.w+'%',200));}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>40?'0 4px 24px rgba(0,0,0,.25)':'none';});
+</script>
+</body>
+</html>
