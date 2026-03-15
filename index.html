@@ -11,21 +11,15 @@
 <meta name="author" content="Md. Tanvir Rahman Fahim">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tahmadim080.github.io"/>
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tahmadim080.github.io">
 <meta property="og:title" content="Md. Tanvir Rahman Fahim — Portfolio">
 <meta property="og:description" content="CSE student at Daffodil International University, Bangladesh. AI master, Linux nerd, open source lover.">
 <meta property="og:locale" content="en_US">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@tahmadim003">
 <meta name="twitter:title" content="Md. Tanvir Rahman Fahim — Portfolio">
 <meta name="twitter:description" content="CSE student at DIU Bangladesh. AI, Linux, open source.">
-
-<!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,21 +29,9 @@
   "url": "https://tahmadim080.github.io",
   "email": "tahmadim001@gmail.com",
   "jobTitle": "CSE Student",
-  "affiliation": {
-    "@type": "EducationalOrganization",
-    "name": "Daffodil International University"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "BD"
-  },
-  "sameAs": [
-    "https://github.com/tahmadim080",
-    "https://www.linkedin.com/in/tahmadim078/",
-    "https://x.com/tahmadim003",
-    "https://www.facebook.com/tahmadim064/",
-    "https://codeforces.com/profile/tahmadim8703"
-  ],
+  "affiliation": {"@type": "EducationalOrganization","name": "Daffodil International University"},
+  "address": {"@type": "PostalAddress","addressCountry": "BD"},
+  "sameAs": ["https://github.com/tahmadim080","https://www.linkedin.com/in/tahmadim078/","https://x.com/tahmadim003","https://www.facebook.com/tahmadim064/","https://codeforces.com/profile/tahmadim8703"],
   "knowsAbout": ["Artificial Intelligence", "Linux", "Python", "C Programming", "HTML", "CSS", "Open Source Software", "Competitive Programming"]
 }
 </script>
@@ -72,14 +54,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:.72rem;text-decoration:none;color:var(--muted);transition:color .2s;letter-spacing:1px;text-transform:uppercase}
 .nav-links a:hover{color:var(--accent)}
 .nav-controls{display:flex;gap:.6rem;align-items:center}
-
-/* THEME BUTTONS */
 .theme-selector{display:flex;gap:4px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;padding:4px}
 .tbtn{width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;border-radius:50%!important;cursor:pointer;transition:transform .2s,opacity .2s;flex-shrink:0;border:none!important;padding:0!important;margin:0!important;display:block!important;box-sizing:border-box!important}
 .tbtn:hover{transform:scale(1.2);opacity:.85}
 .tbtn.active{box-shadow:0 0 0 2px #fff,0 0 0 3px rgba(0,0,0,.3)}
-
-/* MODE TOGGLE */
 .mtoggle{width:52px;height:26px;background:var(--surface);border:1px solid var(--border);border-radius:13px;cursor:pointer;position:relative;transition:background .35s;display:flex;align-items:center;padding:3px;user-select:none}
 .mball{width:20px;height:20px;background:var(--accent);border-radius:50%;transition:transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .mball.right{transform:translateX(26px)}
@@ -96,30 +74,59 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 .orb3{width:280px;height:280px;top:45%;left:45%;background:var(--cyan);animation-delay:-6s}
 @keyframes orbf{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.06)}}
 
-.hero-inner{position:relative;z-index:1;text-align:center;max-width:860px}
+.hero-inner{position:relative;z-index:1;text-align:center;max-width:860px;display:flex;flex-direction:column;align-items:center}
 .h-greet{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;opacity:0;animation:fup .6s .2s forwards}
-.h-name{font-size:clamp(2.2rem,6vw,4.8rem);font-weight:700;line-height:1.1;margin-bottom:.6rem;opacity:0;animation:fup .6s .4s forwards;color:var(--text)}
-.h-name{position:relative}
-.h-name .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:crt-flicker 6s infinite}
-/* scanline removed */
-/* red ghost */
-.h-name .gr::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-red 5s infinite}
-/* cyan ghost */
-.h-name .gr::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-cyan 5s infinite .07s}
 
-/* CRT flicker — subtle brightness pulse */
-@keyframes crt-flicker{
-  0%,100%{filter:brightness(1)}
-  92%{filter:brightness(1)}
-  92.5%{filter:brightness(1.4) contrast(1.2)}
-  93%{filter:brightness(0.7)}
-  93.5%{filter:brightness(1.3)}
-  94%{filter:brightness(1)}
+/* ── PROFILE PICTURE ── */
+.avatar-wrap{position:relative;width:140px;height:140px;margin-bottom:1.5rem;opacity:0;animation:fup .6s .3s forwards;flex-shrink:0}
+.avatar-ring{position:absolute;inset:-4px;border-radius:50%;background:var(--grad);animation:ring-spin 4s linear infinite;z-index:0}
+.avatar-ring::before{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--bg)}
+.avatar-img{position:relative;z-index:1;width:140px;height:140px;border-radius:50%;object-fit:cover;display:block}
+/* glitch layers on avatar */
+.avatar-glitch{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:2;pointer-events:none}
+.avatar-glitch::before,.avatar-glitch::after{content:'';position:absolute;inset:0;border-radius:50%;background-image:var(--avatar-img);background-size:cover;background-position:center;opacity:0}
+.avatar-glitch::before{animation:av-glitch-r 5s infinite;mix-blend-mode:screen}
+.avatar-glitch::after{animation:av-glitch-b 5s infinite .08s;mix-blend-mode:screen}
+@keyframes ring-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes av-glitch-r{
+  0%,78%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  79%{opacity:.85;transform:translate(-5px,0);clip-path:inset(8% 0 62% 0);filter:hue-rotate(90deg) saturate(2)}
+  80%{opacity:.7;transform:translate(5px,1px);clip-path:inset(58% 0 12% 0)}
+  81%{opacity:.9;transform:translate(-3px,0);clip-path:inset(28% 0 42% 0);filter:hue-rotate(-60deg)}
+  82%{opacity:0;clip-path:inset(50% 0 50% 0)}
+  85%{opacity:.8;transform:translate(6px,-1px);clip-path:inset(3% 0 72% 0);filter:hue-rotate(180deg)}
+  86%{opacity:.6;transform:translate(-6px,1px);clip-path:inset(68% 0 3% 0)}
+  87%{opacity:.9;transform:translate(4px,0);clip-path:inset(38% 0 22% 0)}
+  88%{opacity:0;clip-path:inset(50% 0 50% 0)}
+}
+@keyframes av-glitch-b{
+  0%,78%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
+  79%{opacity:.8;transform:translate(5px,0);clip-path:inset(62% 0 8% 0);filter:hue-rotate(-90deg) saturate(2)}
+  80%{opacity:.6;transform:translate(-5px,0);clip-path:inset(12% 0 58% 0)}
+  81%{opacity:.8;transform:translate(3px,-1px);clip-path:inset(42% 0 28% 0);filter:hue-rotate(60deg)}
+  82%{opacity:0;clip-path:inset(50% 0 50% 0)}
+  85%{opacity:.7;transform:translate(-6px,1px);clip-path:inset(72% 0 3% 0);filter:hue-rotate(-180deg)}
+  86%{opacity:.5;transform:translate(6px,-1px);clip-path:inset(3% 0 68% 0)}
+  87%{opacity:.8;transform:translate(-4px,0);clip-path:inset(22% 0 38% 0)}
+  88%{opacity:0;clip-path:inset(50% 0 50% 0)}
+}
+/* CRT flicker on avatar */
+.avatar-img{animation:av-flicker 6s infinite}
+@keyframes av-flicker{
+  0%,100%{filter:brightness(1) contrast(1)}
+  79%{filter:brightness(1) contrast(1)}
+  79.5%{filter:brightness(1.5) contrast(1.3) saturate(1.5)}
+  80%{filter:brightness(0.6) contrast(1)}
+  80.5%{filter:brightness(1.3) contrast(1.2)}
+  81%{filter:brightness(1) contrast(1)}
 }
 
-
-
-/* red channel glitch */
+/* NAME */
+.h-name{font-size:clamp(2.2rem,6vw,4.8rem);font-weight:700;line-height:1.1;margin-bottom:.6rem;opacity:0;animation:fup .6s .4s forwards;color:var(--text);position:relative}
+.h-name .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:crt-flicker 6s infinite}
+.h-name .gr::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-red 5s infinite}
+.h-name .gr::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:glitch-cyan 5s infinite .07s}
+@keyframes crt-flicker{0%,100%{filter:brightness(1)}92%{filter:brightness(1)}92.5%{filter:brightness(1.4) contrast(1.2)}93%{filter:brightness(0.7)}93.5%{filter:brightness(1.3)}94%{filter:brightness(1)}}
 @keyframes glitch-red{
   0%,79%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
   80%{opacity:.9;transform:translate(-4px,0);clip-path:inset(10% 0 60% 0);filter:hue-rotate(120deg)}
@@ -131,8 +138,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
   88%{opacity:.9;transform:translate(3px,0);clip-path:inset(40% 0 20% 0)}
   89%{opacity:0;clip-path:inset(50% 0 50% 0)}
 }
-
-/* cyan channel glitch */
 @keyframes glitch-cyan{
   0%,79%,100%{opacity:0;transform:translate(0,0);clip-path:inset(50% 0 50% 0)}
   80%{opacity:.8;transform:translate(4px,0);clip-path:inset(60% 0 10% 0);filter:hue-rotate(-120deg)}
@@ -144,24 +149,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
   88%{opacity:.8;transform:translate(-3px,0);clip-path:inset(20% 0 45% 0)}
   89%{opacity:0;clip-path:inset(50% 0 50% 0)}
 }
+
 .h-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(.85rem,2vw,1rem);color:var(--muted);margin-bottom:2.5rem;opacity:0;animation:fup .6s .6s forwards}
 .h-tag .a1{color:var(--accent)}
 .h-tag .a2{color:var(--accent2)}
 #tcursor::after{content:'|';animation:blink 1s infinite;color:var(--accent)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-
 .badges{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;margin-bottom:2.8rem;opacity:0;animation:fup .6s .8s forwards}
 .badge{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:.35rem .9rem;border-radius:20px;border:1px solid var(--border);background:var(--bg3);color:var(--text);transition:border-color .2s,transform .2s,box-shadow .2s;cursor:default}
 .badge:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle}
-
 .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fup .6s 1s forwards}
 .btn{font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.7rem 1.8rem;border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s;letter-spacing:.5px;cursor:pointer;border:none;display:inline-block}
 .btn-p{background:var(--grad);color:var(--bg);font-weight:700}
 .btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--accent) 40%,transparent)}
 .btn-o{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn-o:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px)}
-
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:fup 1s 1.5s forwards;cursor:pointer;z-index:2}
 .scroll-hint span{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:3px;text-transform:uppercase}
 .smouse{width:20px;height:32px;border:2px solid var(--muted);border-radius:10px;display:flex;align-items:flex-start;justify-content:center;padding-top:4px}
@@ -175,8 +178,6 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .slabel{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:.4rem}
 .stitle{font-size:2.2rem;font-weight:700;margin-bottom:2.8rem;position:relative;display:inline-block;color:var(--text)}
 .stitle::after{content:'';position:absolute;bottom:-8px;left:0;width:50px;height:3px;background:var(--grad);border-radius:2px}
-
-/* ABOUT */
 #about{background:var(--bg2)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:stretch}
 .about-text p{color:var(--muted);margin-bottom:1.1rem;line-height:1.8;font-size:.97rem}
@@ -193,8 +194,6 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .gcrd .ico{font-size:2.5rem}
 .gcrd .ti{font-size:.95rem;font-weight:600;color:var(--text)}
 .gcrd .su{font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:3px}
-
-/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.4rem}
 .skcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.6rem;transition:border-color .2s,transform .2s,box-shadow .2s;position:relative;overflow:hidden}
 .skcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .3s;transform-origin:left}
@@ -206,8 +205,6 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .skbar{height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
 .skfill{height:100%;background:var(--grad);border-radius:2px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
 .sklvl{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);text-align:right;margin-top:.3rem}
-
-/* LINUX */
 #linux{background:var(--bg2)}
 .terminal{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'JetBrains Mono',monospace;max-width:680px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .t-hdr{background:var(--bg3);padding:.7rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border)}
@@ -218,8 +215,6 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .distros{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-top:2rem}
 .dtag{font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:.28rem .75rem;border-radius:4px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);transition:all .2s;cursor:default}
 .dtag:hover{color:var(--accent);border-color:var(--accent);transform:scale(1.05)}
-
-/* CP */
 .cpcard{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;transition:border-color .2s,box-shadow .2s}
 .cpcard:hover{border-color:var(--accent);box-shadow:0 12px 40px color-mix(in srgb,var(--accent) 20%,transparent)}
 .cphandle{font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--accent);margin-bottom:.5rem}
@@ -231,8 +226,6 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .lbar{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden}
 .lfill{height:100%;background:var(--grad);border-radius:3px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
 .lpct{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);text-align:right}
-
-/* CONNECT */
 .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .soc{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.4rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:.9rem;transition:border-color .2s,transform .2s,box-shadow .2s;min-height:80px}
 .soc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px color-mix(in srgb,var(--accent) 20%,transparent)}
@@ -240,23 +233,14 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .soc:hover .soci{background:var(--surface);border-color:var(--accent)}
 .socn{font-weight:600;font-size:.88rem;color:var(--text)}
 .soch{font-size:.68rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px;word-break:break-all;line-height:1.4}
-
-/* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);letter-spacing:1px;transition:background .35s,border-color .35s}
 footer em{color:var(--accent);font-style:normal}
-
-/* PARTICLES */
 #ptcl{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
 .ptc{position:absolute;border-radius:50%;background:var(--accent);opacity:0;animation:pf linear infinite}
 @keyframes pf{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:.5}90%{opacity:.2}100%{transform:translateY(-5vh) translateX(var(--dx));opacity:0}}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-/* CURSOR GLOW */
 #cglow{position:fixed;width:280px;height:280px;pointer-events:none;z-index:0;border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);opacity:.07;transform:translate(-50%,-50%);transition:left .12s,top .12s}
-
 @media(max-width:768px){.nav-links{display:none}.about-grid{grid-template-columns:1fr}.cpcard{grid-template-columns:1fr}.social-grid{grid-template-columns:repeat(2,1fr)}nav{padding:0 1rem}section{padding:4rem 1rem}}
 @media(max-width:480px){.social-grid{grid-template-columns:1fr}}
 </style>
@@ -265,15 +249,10 @@ footer em{color:var(--accent);font-style:normal}
 <div id="cglow"></div>
 <div id="ptcl"></div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">fahim<em>.</em>dev</div>
   <div class="nav-links">
-    <a href="#about">about</a>
-    <a href="#skills">skills</a>
-    <a href="#linux">linux</a>
-    <a href="#cp">cp</a>
-    <a href="#connect">connect</a>
+    <a href="#about">about</a><a href="#skills">skills</a><a href="#linux">linux</a><a href="#cp">cp</a><a href="#connect">connect</a>
   </div>
   <div class="nav-controls">
     <div class="theme-selector">
@@ -283,22 +262,26 @@ footer em{color:var(--accent);font-style:normal}
       <div class="tbtn" data-t="gruvbox" title="Gruvbox" style="background:linear-gradient(135deg,#d79921,#fe8019)"></div>
     </div>
     <div class="mtoggle" id="mtog" title="Toggle light/dark">
-      <span class="mico moon">🌙</span>
-      <span class="mico sun">☀️</span>
+      <span class="mico moon">🌙</span><span class="mico sun">☀️</span>
       <div class="mball" id="mball"></div>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="orbs">
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
   </div>
   <div class="hero-inner">
     <p class="h-greet">// Hello, World! 👋</p>
+
+    <!-- PROFILE PICTURE — replace avatar.jpg with your image file name -->
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <img class="avatar-img" id="avatarImg" src="avatar.jpg" alt="Md. Tanvir Rahman Fahim" onerror="this.src='https://avatars.githubusercontent.com/u/tahmadim080'"/>
+      <div class="avatar-glitch" id="avatarGlitch"></div>
+    </div>
+
     <h1 class="h-name">
       <span class="gr" data-text="Md. Tanvir Rahman">Md. Tanvir Rahman</span><br>
       <span class="gr" data-text="Fahim">Fahim</span>
@@ -328,7 +311,6 @@ footer em{color:var(--accent);font-style:normal}
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <p class="slabel">01 // about_me</p>
@@ -343,10 +325,7 @@ footer em{color:var(--accent);font-style:normal}
         </div>
         <div class="gcrd">
           <div class="ico">⚔️</div>
-          <div>
-            <div class="ti">Genshin Impact Player</div>
-            <div class="su">Exploring Teyvat in free time 🌸</div>
-          </div>
+          <div><div class="ti">Genshin Impact Player</div><div class="su">Exploring Teyvat in free time 🌸</div></div>
         </div>
       </div>
       <div class="reveal" style="transition-delay:.15s;display:flex;flex-direction:column">
@@ -361,68 +340,28 @@ footer em{color:var(--accent);font-style:normal}
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <p class="slabel">02 // skills</p>
     <h2 class="stitle">Tech Stack</h2>
     <div class="skills-grid">
-      <div class="skcard reveal" data-level="92">
-        <div class="skicon">🤖</div>
-        <div class="skname">Artificial Intelligence</div>
-        <div class="skdesc">Vast knowledge in AI concepts, ML fundamentals, and practical AI tooling.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Master</div>
-      </div>
-      <div class="skcard reveal" data-level="90" style="transition-delay:.05s">
-        <div class="skicon">🌐</div>
-        <div class="skname">HTML &amp; CSS</div>
-        <div class="skdesc">Crafting responsive, modern web interfaces with semantic HTML and expressive CSS.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Advanced</div>
-      </div>
-      <div class="skcard reveal" data-level="96" style="transition-delay:.1s">
-        <div class="skicon">🐧</div>
-        <div class="skname">Linux</div>
-        <div class="skdesc">Power user since 2019. 80+ distros, kernel config, shell scripting, sysadmin.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Expert</div>
-      </div>
-      <div class="skcard reveal" data-level="80" style="transition-delay:.15s">
-        <div class="skicon">⚙️</div>
-        <div class="skname">C Programming</div>
-        <div class="skdesc">Systems programming, memory management, pointers, low-level concepts.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Proficient</div>
-      </div>
-      <div class="skcard reveal" data-level="78" style="transition-delay:.2s">
-        <div class="skicon">🐍</div>
-        <div class="skname">Python</div>
-        <div class="skdesc">Scripting, automation, AI/ML experiments, data processing.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Proficient</div>
-      </div>
-      <div class="skcard reveal" data-level="42" style="transition-delay:.25s">
-        <div class="skicon">🏆</div>
-        <div class="skname">C++ (Learning)</div>
-        <div class="skdesc">Currently mastering C++ for competitive programming — STL, algorithms, DS.</div>
-        <div class="skbar"><div class="skfill"></div></div>
-        <div class="sklvl">Intermediate</div>
-      </div>
+      <div class="skcard reveal" data-level="92"><div class="skicon">🤖</div><div class="skname">Artificial Intelligence</div><div class="skdesc">Vast knowledge in AI concepts, ML fundamentals, and practical AI tooling.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Master</div></div>
+      <div class="skcard reveal" data-level="90" style="transition-delay:.05s"><div class="skicon">🌐</div><div class="skname">HTML &amp; CSS</div><div class="skdesc">Crafting responsive, modern web interfaces with semantic HTML and expressive CSS.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Advanced</div></div>
+      <div class="skcard reveal" data-level="96" style="transition-delay:.1s"><div class="skicon">🐧</div><div class="skname">Linux</div><div class="skdesc">Power user since 2019. 80+ distros, kernel config, shell scripting, sysadmin.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Expert</div></div>
+      <div class="skcard reveal" data-level="80" style="transition-delay:.15s"><div class="skicon">⚙️</div><div class="skname">C Programming</div><div class="skdesc">Systems programming, memory management, pointers, low-level concepts.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Proficient</div></div>
+      <div class="skcard reveal" data-level="78" style="transition-delay:.2s"><div class="skicon">🐍</div><div class="skname">Python</div><div class="skdesc">Scripting, automation, AI/ML experiments, data processing.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Proficient</div></div>
+      <div class="skcard reveal" data-level="42" style="transition-delay:.25s"><div class="skicon">🏆</div><div class="skname">C++ (Learning)</div><div class="skdesc">Currently mastering C++ for competitive programming — STL, algorithms, DS.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Intermediate</div></div>
     </div>
   </div>
 </section>
 
-<!-- LINUX -->
 <section id="linux">
   <div class="container">
     <p class="slabel">03 // linux_journey</p>
     <h2 class="stitle">Linux Nerd 🐧</h2>
     <div class="terminal reveal">
       <div class="t-hdr">
-        <div class="dc" style="background:#ff5f57"></div>
-        <div class="dc" style="background:#febc2e"></div>
-        <div class="dc" style="background:#28c840"></div>
+        <div class="dc" style="background:#ff5f57"></div><div class="dc" style="background:#febc2e"></div><div class="dc" style="background:#28c840"></div>
         <span class="t-title">fahim@pop-os ~ $</span>
       </div>
       <div class="t-body">
@@ -447,7 +386,6 @@ footer em{color:var(--accent);font-style:normal}
   </div>
 </section>
 
-<!-- CP -->
 <section id="cp">
   <div class="container">
     <p class="slabel">04 // competitive_programming</p>
@@ -474,7 +412,6 @@ footer em{color:var(--accent);font-style:normal}
   </div>
 </section>
 
-<!-- CONNECT -->
 <section id="connect">
   <div class="container">
     <p class="slabel">05 // connect</p>
@@ -524,7 +461,22 @@ let curMode=localStorage.getItem('pf-mode')||'dark';
 
 function spawnParticles(){const c=document.getElementById('ptcl');c.innerHTML='';const n=window.innerWidth<600?12:25;for(let i=0;i<n;i++){const p=document.createElement('div');p.className='ptc';const size=Math.random()*2+1;p.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*10}s;--dx:${(Math.random()-.5)*180}px`;c.appendChild(p);}}
 
-function applyTheme(){const vars=THEMES[curTheme][curMode];const root=document.documentElement.style;Object.entries(vars).forEach(([k,v])=>root.setProperty('--'+k,v));const ball=document.getElementById('mball');ball.className='mball'+(curMode==='light'?' right':'');document.querySelectorAll('.tbtn').forEach(b=>b.classList.toggle('active',b.dataset.t===curTheme));spawnParticles();}
+function applyTheme(){
+  const vars=THEMES[curTheme][curMode];
+  const root=document.documentElement.style;
+  Object.entries(vars).forEach(([k,v])=>root.setProperty('--'+k,v));
+  const ball=document.getElementById('mball');
+  ball.className='mball'+(curMode==='light'?' right':'');
+  document.querySelectorAll('.tbtn').forEach(b=>b.classList.toggle('active',b.dataset.t===curTheme));
+  // update glitch layers background-image to match current avatar
+  const img=document.getElementById('avatarImg');
+  const glitch=document.getElementById('avatarGlitch');
+  if(img&&glitch){
+    const url=`url('${img.src}')`;
+    glitch.style.setProperty('--avatar-img',url);
+  }
+  spawnParticles();
+}
 
 function setTheme(t){curTheme=t;localStorage.setItem('pf-theme',t);applyTheme();}
 function toggleMode(){curMode=curMode==='dark'?'light':'dark';localStorage.setItem('pf-mode',curMode);applyTheme();}
@@ -532,6 +484,11 @@ function toggleMode(){curMode=curMode==='dark'?'light':'dark';localStorage.setIt
 document.getElementById('mtog').addEventListener('click',toggleMode);
 document.querySelectorAll('.tbtn').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.t)));
 applyTheme();
+
+// update glitch bg once image loads
+document.getElementById('avatarImg').addEventListener('load',function(){
+  document.getElementById('avatarGlitch').style.setProperty('--avatar-img',`url('${this.src}')`);
+});
 
 const phrases=['Tech Enthusiast','AI Master','Open Source Lover','Linux Power User','CP Grinder'];
 let pi=0,ci=0,del=false;
