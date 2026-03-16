@@ -270,7 +270,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 }
 
 /* SUBTITLE — retro terminal typing */
-.h-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(.85rem,2vw,1rem);color:var(--muted);margin-bottom:2.5rem;opacity:0;animation:fup .6s .6s forwards}
+.h-tag{font-family:'JetBrains Mono',monospace;font-size:clamp(.85rem,2vw,1rem);color:var(--muted);margin-bottom:.4rem;opacity:0;animation:fup .6s .6s forwards}
+.h-tag2{margin-bottom:2.5rem;animation-delay:.7s}
 .h-tag .a1{color:var(--accent)}.h-tag .a2{color:var(--accent2)}
 .glitch-phrase{display:inline-block;color:var(--accent);font-family:'JetBrains Mono',monospace;text-shadow:0 0 6px var(--accent)}
 /* blinking block cursor after the typed text */
@@ -303,7 +304,7 @@ section{padding:5.5rem 2rem;position:relative;z-index:1}
 .slabel{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:.4rem}
 
 /* SECTION TITLES — glitch+scramble */
-.stitle{font-size:2.2rem;font-weight:700;margin-bottom:2.8rem;position:relative;display:inline-block;color:var(--text)}
+.stitle{font-size:2.2rem;font-weight:700;margin-bottom:2.8rem;position:relative;display:inline-block;color:var(--text);min-height:2.6rem}
 .stitle::after{content:'';position:absolute;bottom:-8px;left:0;width:50px;height:3px;background:var(--grad);border-radius:2px}
 .stitle::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;color:var(--accent2);opacity:0;pointer-events:none}
 .stitle-b{position:absolute;top:0;left:0;width:100%;color:var(--cyan);opacity:0;pointer-events:none;font-size:2.2rem;font-weight:700;font-family:inherit}
@@ -451,6 +452,10 @@ footer em{color:var(--accent);font-style:normal}
   .skills-grid{grid-template-columns:1fr}
   /* cp */
   .cpcard{grid-template-columns:1fr;gap:1.5rem}
+  .lrow{grid-template-columns:60px 1fr 36px;gap:.4rem}
+  .lname{font-size:.65rem}
+  .lpct{font-size:.62rem}
+  .lbars{gap:.55rem}
   /* connect */
   .social-grid{grid-template-columns:repeat(2,1fr)}
   /* stop orbs from causing horizontal scroll */
@@ -459,8 +464,8 @@ footer em{color:var(--accent);font-style:normal}
   .orb2{width:220px;height:220px;bottom:-60px;right:-60px}
   .orb3{width:160px;height:160px}
   /* section title glitch — keep but stop overflow */
-  .stitle{max-width:100%;overflow:hidden}
-  .stitle-b,.stitle::before{overflow:hidden}
+  .stitle{max-width:100%;overflow:hidden;min-height:5.2rem;display:block}
+  .stitle-b,.stitle::before{overflow:hidden;display:block}
   /* terminal */
   .terminal{border-radius:8px}
   .t-body{font-size:.75rem;padding:1rem}
@@ -518,7 +523,9 @@ footer em{color:var(--accent);font-style:normal}
     </h1>
     <p class="h-tag">
       <span class="a1">CSE Student</span> @ DIU &nbsp;&#183;&nbsp;
-      <span class="a2">Linux Nerd</span> &nbsp;&#183;&nbsp;
+      <span class="a2">Linux Nerd</span>
+    </p>
+    <p class="h-tag h-tag2">
       <span id="glitch-subtitle" class="glitch-phrase">Tech Enthusiast</span>
     </p>
     <div class="badges">
@@ -666,9 +673,9 @@ footer em{color:var(--accent);font-style:normal}
         <div class="soci" style="font-family:'JetBrains Mono';font-weight:700;font-size:1rem;color:var(--accent)">CF</div>
         <div><div class="socn">Codeforces</div><div class="soch">@tahmadim8703</div></div>
       </a>
-      <a href="mailto:tahmadim001@gmail.com" class="soc reveal" style="transition-delay:.25s">
+      <a href="/cdn-cgi/l/email-protection#1f6b7e77727e7b76722f2f2e5f78727e7673317c7072" class="soc reveal" style="transition-delay:.25s">
         <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-        <div><div class="socn">Email</div><div class="soch">tahmadim001@gmail.com</div></div>
+        <div><div class="socn">Email</div><div class="soch"><span class="__cf_email__" data-cfemail="0f7b6e67626e6b66623f3f3e4f68626e6663216c6062">[email&#160;protected]</span></div></div>
       </a>
     </div>
   </div>
@@ -679,7 +686,7 @@ footer em{color:var(--accent);font-style:normal}
   <p style="margin-top:.4rem;font-size:.62rem;opacity:.6">Single-file portfolio &middot; Hosted on GitHub Pages</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.scrollTo(0,0);
 history.scrollRestoration='manual';
 
