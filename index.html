@@ -62,14 +62,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 .avatar-ring{position:absolute;inset:-5px;border-radius:50%;background:var(--grad);animation:ring-spin 3s linear infinite;z-index:0}
 .avatar-ring::before{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--bg)}
 /* THE GLOW IS ON THE IMG — no conflict with fup on wrap */
-.avatar-img{position:relative;z-index:1;width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;animation:av-glow-pulse 3s 1s ease-in-out infinite;will-change:filter}
-.avatar-scanlines{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.1) 3px,rgba(0,0,0,0.1) 4px);animation:av-scan 1.5s linear infinite}
+.avatar-img{position:relative;z-index:1;width:150px;height:150px;border-radius:50%;object-fit:cover;display:block}
+.avatar-scanlines{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 4px);animation:av-scan 1.8s linear infinite}
+/* CRT vignette — darkens edges of the circle */
+.avatar-scanlines::after{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,transparent 55%,rgba(0,0,0,0.35) 100%)}
 @keyframes ring-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 @keyframes av-scan{0%{background-position:0 0}100%{background-position:0 150px}}
 
-/* AVATAR — broken bulb flicker, matches glitch timing */
-@keyframes av-glow-pulse{
-  0%,100%{filter:brightness(1)}
+
   10%{filter:brightness(1)}
   10.06%{filter:brightness(10) contrast(5) saturate(0)}
   10.12%{filter:brightness(0)}
@@ -608,9 +608,9 @@ footer em{color:var(--accent);font-style:normal}
         <div class="soci" style="font-family:'JetBrains Mono';font-weight:700;font-size:1rem;color:var(--accent)">CF</div>
         <div><div class="socn">Codeforces</div><div class="soch">@tahmadim8703</div></div>
       </a>
-      <a href="mailto:tahmadim001@gmail.com" class="soc reveal" style="transition-delay:.25s">
+      <a href="/cdn-cgi/l/email-protection#fd899c95909c999490cdcdccbd9a909c9491d39e9290" class="soc reveal" style="transition-delay:.25s">
         <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-        <div><div class="socn">Email</div><div class="soch">tahmadim001@gmail.com</div></div>
+        <div><div class="socn">Email</div><div class="soch"><span class="__cf_email__" data-cfemail="ff8b9e97929e9b9692cfcfcebf98929e9693d19c9092">[email&#160;protected]</span></div></div>
       </a>
     </div>
   </div>
@@ -621,7 +621,7 @@ footer em{color:var(--accent);font-style:normal}
   <p style="margin-top:.4rem;font-size:.62rem;opacity:.6">Single-file portfolio &middot; Hosted on GitHub Pages</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.scrollTo(0,0);
 history.scrollRestoration='manual';
 
@@ -763,7 +763,6 @@ document.addEventListener('mousemove',e=>{
 
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');const sf=e.target.querySelector('.skfill');if(sf)setTimeout(()=>sf.style.width=e.target.dataset.level+'%',100);e.target.querySelectorAll('.lfill').forEach(f=>setTimeout(()=>f.style.width=f.dataset.w+'%',200));}});},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>40?'0 4px 24px rgba(0,0,0,.25)':'none';},{passive:true});
 </script>
 </body>
