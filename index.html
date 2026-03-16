@@ -228,33 +228,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 
 /* NAME GLITCH */
 .h-name{font-size:clamp(2.2rem,6vw,4.8rem);font-weight:700;line-height:1.1;margin-bottom:.6rem;opacity:0;animation:fup .6s .4s forwards;color:var(--text);position:relative}
-.h-name .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;animation:name-flicker 3s infinite;will-change:filter}
-.h-name .gr::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:name-r 3s infinite;will-change:transform,opacity}
-.h-name .gr::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:name-b 3s infinite .05s;will-change:transform,opacity}
-@keyframes name-flicker{
-  0%,100%{filter:brightness(1)}
-  10%{filter:brightness(1)}10.2%{filter:brightness(2) contrast(1.5)}10.5%{filter:brightness(0.3)}10.8%{filter:brightness(1.5)}11%{filter:brightness(1)}
-  30%{filter:brightness(1)}30.2%{filter:brightness(2.2)}30.5%{filter:brightness(0.2)}30.8%{filter:brightness(1.6)}31%{filter:brightness(1)}
-  55%{filter:brightness(1)}55.2%{filter:brightness(1.9)}55.5%{filter:brightness(0.25)}55.8%{filter:brightness(1.5)}56%{filter:brightness(1)}
-  75%{filter:brightness(1)}75.2%{filter:brightness(2.1)}75.5%{filter:brightness(0.2)}75.8%{filter:brightness(1.6)}76%{filter:brightness(1)}
-}
-@keyframes name-r{
-  0%,9%,12%,29%,32%,54%,57%,74%,77%,100%{opacity:0;clip-path:inset(50% 0 50% 0)}
-  10%{opacity:.95;transform:translate(-6px,1px);clip-path:inset(8% 0 62% 0);filter:hue-rotate(120deg)}
-  10.4%{opacity:.8;transform:translate(6px,-1px);clip-path:inset(58% 0 8% 0)}
-  10.8%{opacity:.95;transform:translate(-4px,0);clip-path:inset(28% 0 42% 0)}
-  30%{opacity:.9;transform:translate(-8px,2px);clip-path:inset(3% 0 72% 0);filter:hue-rotate(180deg)}
-  30.4%{opacity:.75;transform:translate(8px,-2px);clip-path:inset(68% 0 3% 0)}
-  30.8%{opacity:.9;transform:translate(-5px,0);clip-path:inset(38% 0 22% 0)}
-  55%{opacity:.95;transform:translate(7px,-1px);clip-path:inset(12% 0 58% 0);filter:hue-rotate(240deg)}
-  55.4%{opacity:.8;transform:translate(-7px,1px);clip-path:inset(52% 0 12% 0)}
-  55.8%{opacity:.9;transform:translate(4px,0);clip-path:inset(32% 0 38% 0)}
-  75%{opacity:.95;transform:translate(-9px,0);clip-path:inset(18% 0 48% 0);filter:hue-rotate(-120deg)}
-  75.4%{opacity:.8;transform:translate(9px,0);clip-path:inset(48% 0 18% 0)}
-  75.8%{opacity:.9;transform:translate(-5px,1px);clip-path:inset(28% 0 38% 0)}
-}
-@keyframes name-b{
-  0%,9%,12%,29%,32%,54%,57%,74%,77%,100%{opacity:0;clip-path:inset(50% 0 50% 0)}
+.h-name .gr{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block;will-change:filter}
+.h-name .gr::before,.h-name .gr::after{display:none}
+/* ghost spans with solid colors — same trick as stitle-b */
+.gr-r{position:absolute;top:0;left:0;width:100%;color:var(--accent2);-webkit-text-fill-color:var(--accent2)!important;opacity:0;pointer-events:none;font-size:inherit;font-weight:inherit;font-family:inherit;white-space:nowrap;background:none!important}
+.gr-b{position:absolute;top:0;left:0;width:100%;color:var(--cyan);-webkit-text-fill-color:var(--cyan)!important;opacity:0;pointer-events:none;font-size:inherit;font-weight:inherit;font-family:inherit;white-space:nowrap;background:none!important}
+
+
+
   10%{opacity:.9;transform:translate(6px,-1px);clip-path:inset(62% 0 8% 0);filter:hue-rotate(-120deg)}
   10.4%{opacity:.75;transform:translate(-6px,1px);clip-path:inset(8% 0 58% 0)}
   10.8%{opacity:.9;transform:translate(4px,0);clip-path:inset(42% 0 28% 0)}
@@ -302,16 +283,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 section{padding:5.5rem 2rem;position:relative;z-index:1}
 .container{max-width:1000px;margin:0 auto}
 .slabel{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:.4rem}
+.section-left{text-align:left}
+.section-right{text-align:right}
+.section-right .stitle-b,.section-right .stitle::before{text-align:right}
+/* section header row — flex with label+title on one side, glitch deco on other */
+.sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.4rem;gap:1rem}
+.sec-hdr-text{display:flex;flex-direction:column}
+.sec-hdr-text .slabel{margin-bottom:.3rem}
+.sec-hdr-text .stitle{margin-bottom:0;min-height:unset}
+/* the glitchy decoration on opposite side */
+.sec-deco{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--accent);letter-spacing:3px;flex-shrink:0}
+.sec-deco span{color:var(--accent);opacity:.7}
+
+
+  15%{opacity:1}15.2%{opacity:.3}15.4%{opacity:1}15.6%{opacity:.5}15.8%{opacity:1}
+  55%{opacity:1}55.2%{opacity:.2}55.5%{opacity:1}55.7%{opacity:.6}55.9%{opacity:1}
+}
+@media(max-width:768px){.sec-deco{display:none}.sec-hdr{display:block}}
 
 /* SECTION TITLES — glitch+scramble */
-.stitle{font-size:2.2rem;font-weight:700;margin-bottom:2.8rem;position:relative;display:inline-block;color:var(--text);min-height:2.6rem}
-.stitle::after{content:'';position:absolute;bottom:-8px;left:0;width:50px;height:3px;background:var(--grad);border-radius:2px}
+.stitle{font-size:2.2rem;font-weight:700;margin-bottom:1.4rem;position:relative;display:block;color:var(--text);min-height:2.6rem}
+.stitle::after{display:none}
 .stitle::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;color:var(--accent2);opacity:0;pointer-events:none}
 .stitle-b{position:absolute;top:0;left:0;width:100%;color:var(--cyan);opacity:0;pointer-events:none;font-size:2.2rem;font-weight:700;font-family:inherit}
 /* one-shot glitch class — added/removed by JS */
 .stitle.glitching{animation:stitle-burst .4s steps(1) 1 forwards}
 .stitle.glitching::before{animation:stitle-r .4s steps(1) 1 forwards}
 .stitle.glitching .stitle-b{animation:stitle-b .4s steps(1) 1 .02s forwards}
+/* name glitch — same system as stitle */
+.h-name .gr.glitching{animation:stitle-burst .4s steps(1) 1 forwards}
+.h-name .gr.glitching .gr-r{animation:stitle-r .4s steps(1) 1 forwards}
+.h-name .gr.glitching .gr-b{animation:stitle-b .4s steps(1) 1 .02s forwards}
 @keyframes stitle-burst{
   0%{filter:brightness(1)}
   5%{filter:brightness(3) contrast(2) hue-rotate(90deg) saturate(3)}
@@ -464,8 +466,8 @@ footer em{color:var(--accent);font-style:normal}
   .orb2{width:220px;height:220px;bottom:-60px;right:-60px}
   .orb3{width:160px;height:160px}
   /* section title glitch — keep but stop overflow */
-  .stitle{max-width:100%;overflow:hidden;min-height:5.2rem;display:block}
-  .stitle-b,.stitle::before{overflow:hidden;display:block}
+  .stitle{max-width:100%;white-space:normal;word-break:break-word;min-height:6rem}
+  .stitle-b,.stitle::before{white-space:normal;word-break:break-word}
   /* terminal */
   .terminal{border-radius:8px}
   .t-body{font-size:.75rem;padding:1rem}
@@ -518,8 +520,8 @@ footer em{color:var(--accent);font-style:normal}
       <div class="avatar-scanlines"></div>
     </div>
     <h1 class="h-name">
-      <span class="gr" data-text="Md. Tanvir Rahman">Md. Tanvir Rahman</span><br>
-      <span class="gr" data-text="Fahim">Fahim</span>
+      <span class="gr" data-text="Md. Tanvir Rahman"><span class="gr-r">Md. Tanvir Rahman</span><span class="gr-b">Md. Tanvir Rahman</span>Md. Tanvir Rahman</span><br>
+      <span class="gr" data-text="Fahim"><span class="gr-r">Fahim</span><span class="gr-b">Fahim</span>Fahim</span>
     </h1>
     <p class="h-tag">
       <span class="a1">CSE Student</span> @ DIU &nbsp;&#183;&nbsp;
@@ -550,8 +552,13 @@ footer em{color:var(--accent);font-style:normal}
 
 <section id="about">
   <div class="container">
-    <p class="slabel">01 // about_me</p>
-    <h2 class="stitle" data-text="Who Am I?"><span class="stitle-b">Who Am I?</span>Who Am I?</h2>
+    <div class="sec-hdr">
+      <div class="sec-hdr-text section-left">
+        <p class="slabel">01 // about_me</p>
+        <h2 class="stitle" data-text="Who Am I?"><span class="stitle-b">Who Am I?</span>Who Am I?</h2>
+      </div>
+      <div class="sec-deco" id="sd0"><span data-real="&lt;/identity&gt;">&lt;/identity&gt;</span></div>
+    </div>
     <div class="about-grid">
       <div class="reveal">
         <div class="about-text">
@@ -576,8 +583,13 @@ footer em{color:var(--accent);font-style:normal}
 
 <section id="skills">
   <div class="container">
-    <p class="slabel">02 // skills</p>
-    <h2 class="stitle" data-text="Tech Stack"><span class="stitle-b">Tech Stack</span>Tech Stack</h2>
+    <div class="sec-hdr">
+      <div class="sec-deco" id="sd1"><span data-real="skill.exe">skill.exe</span></div>
+      <div class="sec-hdr-text section-right">
+        <p class="slabel">02 // skills</p>
+        <h2 class="stitle" data-text="Tech Stack"><span class="stitle-b">Tech Stack</span>Tech Stack</h2>
+      </div>
+    </div>
     <div class="skills-grid">
       <div class="skcard reveal" data-level="92"><div class="skname">Artificial Intelligence</div><div class="skdesc">Vast knowledge in AI concepts, ML fundamentals, and practical AI tooling.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Master</div></div>
       <div class="skcard reveal" data-level="90" style="transition-delay:.05s"><div class="skname">HTML &amp; CSS</div><div class="skdesc">Crafting responsive, modern web interfaces with semantic HTML and expressive CSS.</div><div class="skbar"><div class="skfill"></div></div><div class="sklvl">Advanced</div></div>
@@ -591,8 +603,13 @@ footer em{color:var(--accent);font-style:normal}
 
 <section id="linux">
   <div class="container">
-    <p class="slabel">03 // linux_journey</p>
-    <h2 class="stitle" data-text="Linux Nerd"><span class="stitle-b">Linux Nerd</span>Linux Nerd</h2>
+    <div class="sec-hdr">
+      <div class="sec-hdr-text section-left">
+        <p class="slabel">03 // linux_journey</p>
+        <h2 class="stitle" data-text="Linux Nerd"><span class="stitle-b">Linux Nerd</span>Linux Nerd</h2>
+      </div>
+      <div class="sec-deco" id="sd2"><span data-real="tty0::on">tty0::on</span></div>
+    </div>
     <div class="terminal reveal">
       <div class="t-hdr">
         <div class="dc" style="background:#ff5f57"></div><div class="dc" style="background:#febc2e"></div><div class="dc" style="background:#28c840"></div>
@@ -624,8 +641,13 @@ footer em{color:var(--accent);font-style:normal}
 
 <section id="cp">
   <div class="container">
-    <p class="slabel">04 // competitive_programming</p>
-    <h2 class="stitle" data-text="Competitive Programming"><span class="stitle-b">Competitive Programming</span>Competitive Programming</h2>
+    <div class="sec-hdr">
+      <div class="sec-deco" id="sd3"><span data-real="cf::grind">cf::grind</span></div>
+      <div class="sec-hdr-text section-right">
+        <p class="slabel">04 // competitive_programming</p>
+        <h2 class="stitle" data-text="Competitive Programming"><span class="stitle-b">Competitive Programming</span>Competitive Programming</h2>
+      </div>
+    </div>
     <div class="cpcard reveal">
       <div>
         <div class="cphandle">tahmadim8703</div>
@@ -650,8 +672,13 @@ footer em{color:var(--accent);font-style:normal}
 
 <section id="connect">
   <div class="container">
-    <p class="slabel">05 // connect</p>
-    <h2 class="stitle" data-text="Let's Connect"><span class="stitle-b">Let's Connect</span>Let's Connect</h2>
+    <div class="sec-hdr">
+      <div class="sec-hdr-text section-left">
+        <p class="slabel">05 // connect</p>
+        <h2 class="stitle" data-text="Let's Connect"><span class="stitle-b">Let's Connect</span>Let's Connect</h2>
+      </div>
+      <div class="sec-deco" id="sd4"><span data-real="net::open">net::open</span></div>
+    </div>
     <div class="social-grid">
       <a href="https://github.com/tahmadim080/" target="_blank" class="soc reveal">
         <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
@@ -673,9 +700,9 @@ footer em{color:var(--accent);font-style:normal}
         <div class="soci" style="font-family:'JetBrains Mono';font-weight:700;font-size:1rem;color:var(--accent)">CF</div>
         <div><div class="socn">Codeforces</div><div class="soch">@tahmadim8703</div></div>
       </a>
-      <a href="/cdn-cgi/l/email-protection#1f6b7e77727e7b76722f2f2e5f78727e7673317c7072" class="soc reveal" style="transition-delay:.25s">
+      <a href="mailto:tahmadim001@gmail.com" class="soc reveal" style="transition-delay:.25s">
         <div class="soci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-        <div><div class="socn">Email</div><div class="soch"><span class="__cf_email__" data-cfemail="0f7b6e67626e6b66623f3f3e4f68626e6663216c6062">[email&#160;protected]</span></div></div>
+        <div><div class="socn">Email</div><div class="soch">tahmadim001@gmail.com</div></div>
       </a>
     </div>
   </div>
@@ -686,7 +713,7 @@ footer em{color:var(--accent);font-style:normal}
   <p style="margin-top:.4rem;font-size:.62rem;opacity:.6">Single-file portfolio &middot; Hosted on GitHub Pages</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 window.scrollTo(0,0);
 history.scrollRestoration='manual';
 
@@ -773,11 +800,9 @@ function resolveToReal(word,done){
 function runCycle(){
   const word=phrases[phraseIdx];
   typeSymbols(word,()=>{
-    glitchBurst(()=>{
-      resolveToReal(word,()=>{
-        phraseIdx=(phraseIdx+1)%phrases.length;
-        setTimeout(runCycle,1800);
-      });
+    resolveToReal(word,()=>{
+      phraseIdx=(phraseIdx+1)%phrases.length;
+      setTimeout(runCycle,1800);
     });
   });
 }
@@ -785,40 +810,69 @@ setTimeout(runCycle,1000);
 
 // SECTION TITLE GLITCH + SCRAMBLE
 const TITLE_CHARS='!@#$%^&*<>?/|[]{}~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-function scrambleTitle(el,done){
-  const original=el.getAttribute('data-text');
-  const tLen=original.length;
-  let frame=0;const total=22;
-  const ghost=el.querySelector('.stitle-b');
-  const iv=setInterval(()=>{
-    frame++;
-    let result='';
-    for(let i=0;i<tLen;i++){const settle=Math.floor((i/tLen)*(total*.7));result+=frame>settle?original[i]:TITLE_CHARS[Math.floor(Math.random()*TITLE_CHARS.length)];}
-    el.childNodes.forEach(n=>{if(n.nodeType===3)n.textContent=result;});
-    el.setAttribute('data-text',result);
-    if(ghost)ghost.textContent=result;
-    if(frame>=total){
-      clearInterval(iv);
-      el.childNodes.forEach(n=>{if(n.nodeType===3)n.textContent=original;});
-      el.setAttribute('data-text',original);
-      if(ghost)ghost.textContent=original;
-      done();
-    }
-  },40);
-}
 function loopTitle(el){
   const wait=800+Math.random()*600;
   setTimeout(()=>{
     el.classList.add('glitching');
     setTimeout(()=>{
       el.classList.remove('glitching');
-      setTimeout(()=>{
-        scrambleTitle(el,()=>setTimeout(()=>loopTitle(el),800+Math.random()*400));
-      },60);
+      setTimeout(()=>loopTitle(el),800+Math.random()*400);
     },420);
   },wait);
 }
 document.querySelectorAll('.stitle').forEach(t=>loopTitle(t));
+
+// SEC-DECO — symbols→resolve loop (same as subtitle)
+const DSYMS2='!@#$%^&*<>?/|[]{}~=+-_';
+function randDS2(){return DSYMS2[Math.floor(Math.random()*DSYMS2.length)];}
+function animDeco(el){
+  const sp=el.querySelector('span');
+  if(!sp)return;
+  const real=sp.getAttribute('data-real')||sp.textContent;
+  sp.setAttribute('data-real',real);
+  const len=real.length;
+  let i=0;
+  sp.textContent='';
+  function typeSyms(){
+    if(i>=len){resolveD();return;}
+    sp.textContent+=randDS2();
+    i++;
+    setTimeout(typeSyms,50+Math.random()*40);
+  }
+  function resolveD(){
+    const arr=Array.from({length:len},()=>randDS2());
+    let j=0;
+    function res(){
+      if(j>=len){sp.textContent=real;setTimeout(()=>animDeco(el),3000+Math.random()*2000);return;}
+      arr[j]=real[j];sp.textContent=arr.join('');j++;
+      setTimeout(res,40+Math.random()*30);
+    }
+    res();
+  }
+  typeSyms();
+}
+// use IntersectionObserver — only animate when visible
+const decoIO=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){decoIO.unobserve(e.target);setTimeout(()=>animDeco(e.target),400);}
+  });
+},{threshold:.3});
+document.querySelectorAll('.sec-deco').forEach(d=>decoIO.observe(d));
+
+
+function loopGr(el){
+  const wait=800+Math.random()*600;
+  setTimeout(()=>{
+    el.classList.add('glitching');
+    setTimeout(()=>{
+      el.classList.remove('glitching');
+      setTimeout(()=>loopGr(el),800+Math.random()*400);
+    },420);
+  },wait);
+}
+const nameSpans=document.querySelectorAll('.h-name .gr');
+if(nameSpans[0])loopGr(nameSpans[0]);
+if(nameSpans[1])setTimeout(()=>loopGr(nameSpans[1]),500);
 
 // CURSOR GLOW with rAF
 let rafPending=false;
