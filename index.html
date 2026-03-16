@@ -11,9 +11,11 @@
 <link rel="canonical" href="https://tahmadim080.github.io"/>
 <meta name="theme-color" content="#282a36">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://tahmadim080.github.io/avatar.jpg">
 <meta property="og:url" content="https://tahmadim080.github.io">
 <meta property="og:title" content="Md. Tanvir Rahman Fahim — Portfolio">
 <meta property="og:description" content="CSE student at Daffodil International University, Bangladesh. AI master, Linux nerd, open source lover.">
+<meta name="twitter:image" content="https://tahmadim080.github.io/avatar.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@tahmadim003">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Md. Tanvir Rahman Fahim","alternateName":["Tanvir Rahman Fahim","Fahim","tahmadim080"],"url":"https://tahmadim080.github.io","email":"tahmadim001@gmail.com","jobTitle":"CSE Student","affiliation":{"@type":"EducationalOrganization","name":"Daffodil International University"},"address":{"@type":"PostalAddress","addressCountry":"BD"},"sameAs":["https://github.com/tahmadim080","https://www.linkedin.com/in/tahmadim078/","https://x.com/tahmadim003","https://www.facebook.com/tahmadim064/","https://codeforces.com/profile/tahmadim8703"]}</script>
@@ -24,7 +26,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .35s,color .35s}
+body{min-height:-webkit-fill-available;font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .35s,color .35s}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 
 /* NAV */
@@ -43,7 +45,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 .mball{width:20px;height:20px;background:var(--accent);border-radius:50%;transition:transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .mball.right{transform:translateX(26px)}
 .mico{position:absolute;font-size:11px;pointer-events:none;transition:opacity .3s}
-.mico.moon{left:6px;top:50%;transform:translateY(-50%)}
+.mico.moon{left:5px;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;line-height:0}
 .mico.sun{right:6px;top:50%;transform:translateY(-50%)}
 
 /* HERO */
@@ -58,11 +60,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2rem;height:64px;d
 .hero-inner{position:relative;z-index:1;text-align:center;max-width:860px;display:flex;flex-direction:column;align-items:center}
 
 /* AVATAR */
-.avatar-wrap{position:relative;width:150px;height:150px;margin-bottom:1.8rem;flex-shrink:0;opacity:0;animation:fup .6s .3s forwards}
-.avatar-ring{position:absolute;inset:-5px;border-radius:50%;background:var(--grad);animation:ring-spin 3s linear infinite;z-index:0}
-.avatar-ring::before{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--bg)}
+.avatar-wrap{position:relative;width:150px;height:150px;margin-bottom:1.8rem;flex-shrink:0;opacity:0;animation:fup .6s .3s forwards;padding:6px}
+.avatar-ring{position:absolute;inset:0;border-radius:50%;background:var(--grad);animation:ring-spin 3s linear infinite;z-index:0}
+.avatar-ring::before{content:'';position:absolute;inset:4px;border-radius:50%;background:var(--bg)}
 /* THE GLOW IS ON THE IMG — no conflict with fup on wrap */
-.avatar-img{position:relative;z-index:1;width:150px;height:150px;border-radius:50%;object-fit:cover;display:block}
+.avatar-img{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
 .avatar-scanlines{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.12) 3px,rgba(0,0,0,0.12) 4px);animation:av-scan 1.8s linear infinite}
 /* CRT vignette — darkens edges of the circle */
 .avatar-scanlines::after{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,transparent 55%,rgba(0,0,0,0.35) 100%)}
@@ -419,8 +421,64 @@ footer em{color:var(--accent);font-style:normal}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 #cglow{position:fixed;width:280px;height:280px;pointer-events:none;z-index:0;border-radius:50%;background:radial-gradient(circle,var(--accent) 0%,transparent 70%);opacity:.07;transform:translate(-50%,-50%);transition:left .12s,top .12s}
-@media(max-width:768px){.nav-links{display:none}.about-grid{grid-template-columns:1fr}.cpcard{grid-template-columns:1fr}.social-grid{grid-template-columns:repeat(2,1fr)}nav{padding:0 1rem}section{padding:4rem 1rem}}
-@media(max-width:480px){.social-grid{grid-template-columns:1fr}}
+@media(max-width:768px){
+  /* nav */
+  .nav-links{display:none}
+  nav{padding:0 1rem}
+  /* hero — stop overflow from glitch transforms */
+  #hero{padding:72px 1.2rem 3rem;min-height:100svh;overflow:hidden}
+  .hero-inner{width:100%}
+  /* avatar smaller on mobile */
+  .avatar-wrap{width:110px;height:110px}
+  .avatar-img{width:100%!important;height:100%!important}
+  .avatar-ring{inset:0}
+  /* name — disable translate glitch on mobile to stop layout jumping */
+  .h-name .gr::before,.h-name .gr::after{display:none}
+  .h-name{width:100%}
+  /* subtitle */
+  .h-tag{font-size:.82rem}
+  /* badges wrap better */
+  .badges{gap:.4rem}
+  .badge{font-size:.68rem;padding:.28rem .7rem}
+  /* buttons full width on small screens */
+  .cta{flex-direction:column;align-items:center;gap:.75rem}
+  .btn{width:100%;max-width:260px;text-align:center}
+  /* sections */
+  section{padding:3.5rem 1.2rem}
+  /* about */
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  /* skills */
+  .skills-grid{grid-template-columns:1fr}
+  /* cp */
+  .cpcard{grid-template-columns:1fr;gap:1.5rem}
+  /* connect */
+  .social-grid{grid-template-columns:repeat(2,1fr)}
+  /* stop orbs from causing horizontal scroll */
+  .orbs{overflow:hidden}
+  .orb1{width:280px;height:280px;top:-80px;left:-80px}
+  .orb2{width:220px;height:220px;bottom:-60px;right:-60px}
+  .orb3{width:160px;height:160px}
+  /* section title glitch — keep but stop overflow */
+  .stitle{max-width:100%;overflow:hidden}
+  .stitle-b,.stitle::before{overflow:hidden}
+  /* terminal */
+  .terminal{border-radius:8px}
+  .t-body{font-size:.75rem;padding:1rem}
+}
+@media(max-width:480px){
+  .social-grid{grid-template-columns:1fr}
+  .h-name{font-size:clamp(1.8rem,8vw,2.8rem)}
+  nav{height:56px}
+  #hero{padding:64px 1rem 2.5rem}
+  .avatar-wrap{width:100px;height:100px}
+  .avatar-img{width:100%!important;height:100%!important}
+}
+/* prevent all animations from causing scroll on mobile */
+@media(max-width:768px){
+  html,body{overflow-x:hidden;max-width:100vw}
+  img,video,iframe,table{max-width:100%}
+  .h-name .gr{overflow:visible}
+}
 </style>
 </head>
 <body>
@@ -440,7 +498,7 @@ footer em{color:var(--accent);font-style:normal}
       <div class="tbtn" data-t="gruvbox" title="Gruvbox" style="background:linear-gradient(135deg,#d79921,#fe8019)"></div>
     </div>
     <div class="mtoggle" id="mtog" title="Toggle light/dark">
-      <span class="mico moon">&#127769;</span><span class="mico sun">&#9728;&#65039;</span>
+      <span class="mico moon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#1a1a2e" stroke="#1a1a2e" stroke-width="1" style="display:block"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span><span class="mico sun">&#9728;&#65039;</span>
       <div class="mball" id="mball"></div>
     </div>
   </div>
